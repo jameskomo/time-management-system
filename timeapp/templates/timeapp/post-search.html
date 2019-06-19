@@ -1,0 +1,17 @@
+{% extends 'timeapp/base.html' %}
+
+{% block content %}
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+  {% for post in filter.qs %}
+    <li>Title: {{ post.title}} - {{ post.title }}</li>
+    <li>Post: {{post.content }}</li>
+    <li>Date Posted: {{ post.date_posted }}</li>
+    <li>Author: {{ post.author }}</li>
+    <hr>
+  {% endfor %}
+  </ul>
+{% endblock %}

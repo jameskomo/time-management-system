@@ -3,18 +3,9 @@ from django.contrib.auth.models import User
 from PIL import Image
 
 
-neighborhood = (
-        ('1', 'Red Ville'),
-        ('2', 'Green View'),
-        ('3', 'The Park'),
-        ('4', 'Lil Arcade'),
-        ('5', 'Komo Avenue'),)
-
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    neighborhood = models.CharField(max_length=25,choices=neighborhood, default='Red Ville')
 
     def __str__(self):
         return f'{self.user.username} Profile'
