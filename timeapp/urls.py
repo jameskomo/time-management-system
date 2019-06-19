@@ -26,7 +26,7 @@ from .views import (
 from . import views
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='mtaa_watch-home'),
+    path('', PostListView.as_view(), name='timeapp-home'),
     path('business/', BusinessListView.as_view(), name='business-home'),
     path('neighborhood/', NeighborhoodListView.as_view(), name='neighborhood-home'),
     path('contact/', ContactListView.as_view(), name='contact-home'),
@@ -46,7 +46,7 @@ urlpatterns = [
     path('neighborhood/<int:pk>/delete/', NeighborhoodDeleteView.as_view(), name='neighborhood-delete'),
     path('business/<int:pk>/delete/', BusinessDeleteView.as_view(), name='business-delete'),
     path('contact/<int:pk>/delete/', ContactDeleteView.as_view(), name='contact-delete'),
-    path('about/', views.about, name='mtaa_watch-about'),
+    path('about/', views.about, name='timeapp-about'),
     url(r'^search/$', views.contactsearch, name='contact-search'),
     url(r'^searchbusiness/$', views.businesssearch, name='business-search'),
     url(r'^searchneighborhood/$', views.neighborhoodsearch, name='neighborhood-search'),

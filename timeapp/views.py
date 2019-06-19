@@ -16,31 +16,31 @@ def home(request):
     context = {
         'posts': Post.objects.all()
     }
-    return render(request, 'mtaa_watch/home.html', context)
+    return render(request, 'timeapp/home.html', context)
 
 # List Views for Post, Business, Neighborhood and Contact
 
 class PostListView(ListView):
     model = Post
-    template_name = 'mtaa_watch/home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'timeapp/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
 
 class NeighborhoodListView(ListView):
     model = Neighborhood
-    template_name = 'mtaa_watch/neighborhood_home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'timeapp/neighborhood_home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'neighborhoods'
     ordering = ['neighborhood_name']
     
 class BusinessListView(ListView):
     model = Business
-    template_name = 'mtaa_watch/business_home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'timeapp/business_home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'businesses'
     ordering = ['business_name']
 
 class ContactListView(ListView):
     model = Contact
-    template_name = 'mtaa_watch/contact_home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'timeapp/contact_home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'contacts'
     ordering = ['contact_name']
 
@@ -190,7 +190,7 @@ class ContactDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 def about(request):
-    return render(request, 'mtaa_watch/about.html', {'title': 'About'})
+    return render(request, 'timeapp/about.html', {'title': 'About'})
 
 
 # Searching Models
@@ -199,14 +199,14 @@ def about(request):
 def contactsearch(request):
     contact_list = Contact.objects.all()
     contact_filter = ContactFilter(request.GET, queryset=contact_list)
-    return render(request, 'mtaa_watch/contact-search.html', {'filter': contact_filter})
+    return render(request, 'timeapp/contact-search.html', {'filter': contact_filter})
 
 def businesssearch(request):
     business_list = Business.objects.all()
     business_filter = BusinessFilter(request.GET, queryset=business_list)
-    return render(request, 'mtaa_watch/business-search.html', {'filter': business_filter})
+    return render(request, 'timeapp/business-search.html', {'filter': business_filter})
 
 def neighborhoodsearch(request):
     neighborhood_list = Neighborhood.objects.all()
     neighborhood_filter = NeighborhoodFilter(request.GET, queryset=neighborhood_list)
-    return render(request, 'mtaa_watch/neighborhood-search.html', {'filter': neighborhood_filter})
+    return render(request, 'timeapp/neighborhood-search.html', {'filter': neighborhood_filter})

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'timeapp.apps.TimeAppConfig',
+    'timeapp.apps.TimeappConfig',
     'crispy_forms',
     'bootstrap4',
     'users.apps.UsersConfig',
@@ -139,6 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'mtaa_watch-home'
+LOGIN_REDIRECT_URL = 'timeapp-home'
 LOGIN_URL = 'login'
 
