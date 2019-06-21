@@ -67,7 +67,7 @@ Build & Deployment
 
     (virtual) $ python3.6 manage.py runserver
 
-    # it will launch the web page from local server. You can also visit the livelink [here](https://SoftSearch.herokuapp.com/).
+    # it will launch the web page from local server. You can also visit the livelink [here](https://softsearch.herokuapp.com/).
  to use the system
 
 ##Built With
