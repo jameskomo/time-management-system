@@ -1,10 +1,10 @@
-# Neighborhood Watch
+# Time Management System Watch
 
-![Image Gallery](https://www.cityofhewitt.com/ImageRepository/Document?documentID=3793)
+![Image Gallery](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjNo5_frvviAhVFzhoKHfwIA_MQjRx6BAgBEAU&url=https%3A%2F%2Ftimemanagementsystems.com%2F&psig=AOvVaw1YZk6QNqOMO9PA09rZNFf3&ust=1561233584452414)
 
-If you are like me, You really don’t know what is happening in your neighborhood most of the time. What if an important meeting happens, theft or even death wouldn’t you like to know about it.   This is a Python application based on Django framework that allows you to be in the loop about everything happening in your neighborhood. From contact information of different handyman to meeting announcements or even alerts.
+This is a simple Python Django time management system that allows users create an account and log in, add (and edit and delete) a row what they have worked on, what date, for how long. This system has three roles with different permission levels: a regular user would only be able to CRUD on their owned records, a user manager would be able to CRUD users, and an admin would be able to CRUD all records and users. The system includes a REST API that makes it possible to perform all user actions via the API, including authentication and implements AJAX for better user experience.
 
-You can see the live Application here [K.O.M.O Gallery](https://komo-neighborhood_watch.herokuapp.com/).
+You can see the live Application here [SoftSearch Time Management System](https://softsearch.herokuapp.com/).
 
 Author Information
 ========
@@ -18,11 +18,12 @@ Features
 - Uses PostgreSQL DB and Deployed to Heroku
 Allows users to:
 - Sign in with the application to start using.
-- Set up a profile about me and a general location and my neighborhood name.
-- Find a list of different businesses in my neighborhood.
-- Find Contact Information for the health department and Police authorities near my neighborhood.
-- Create Posts that will be visible to everyone in my neighborhood.
-- Change My neighborhood when I decide to move out.
+- add (and edit and delete) a row what he has worked on, what date, for how long.
+- Set up a profile about me and be able to update profile as needed.
+- Perform all user actions via the REST API, including authentication
+- Search Postings based on Post title
+- Create Posts that will be visible to everyone 
+- Perform CRUD operations on posts they own
 - Only view details of a single neighborhood.
 
 Behavior Driven Development (BDD)
@@ -57,7 +58,7 @@ You will need to:
 Installation
 ========
 
-    $ git@github.com:jameskomo/neighborhood-watch.git
+    $ git@github.com:jameskomo/time-management-system.git
 
 
 Build & Deployment
@@ -68,7 +69,7 @@ Build & Deployment
 
     (virtual) $ python3.6 manage.py runserver
 
-    # it will launch the web page from local server. You can also visit the livelink [here](https://komo-neighborhood_watch.herokuapp.com/).
+    # it will launch the web page from local server. You can also visit the livelink [here](https://SoftSearch.herokuapp.com/).
  to use the system
 
 ##Built With
