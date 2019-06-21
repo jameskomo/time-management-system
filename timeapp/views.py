@@ -16,6 +16,7 @@ from .filters import PostFilter
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import PostSerializer
+from rest_framework import status
 # END OF REST IMPORTS
 
 def home(request):
@@ -94,3 +95,12 @@ class PostList(APIView):
         all_merch = Post.objects.all()
         serializers = PostSerializer(all_merch, many=True)
         return Response(serializers.data)
+    def post(self, request, format=None):
+        serializers = PostSerializer(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+        
