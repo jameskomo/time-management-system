@@ -1,6 +1,6 @@
 # Time Management System Watch
 
-![Image Gallery](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwif8pGjsPviAhVFhxoKHQV3C9IQjRx6BAgBEAU&url=https%3A%2F%2Fmitrefinch.com%2Fblog%2Fimportance-of-time-management%2F&psig=AOvVaw1YZk6QNqOMO9PA09rZNFf3&ust=1561233584452414)
+![Image Gallery](https://www.noobpreneur.com/wp-content/uploads/2016/12/time-management-1.jpg)
 
 This is a simple Python Django time management system that allows users create an account and log in, add (and edit and delete) a row what they have worked on, what date, for how long. This system has three roles with different permission levels: a regular user would only be able to CRUD on their owned records, a user manager would be able to CRUD users, and an admin would be able to CRUD all records and users. The system includes a REST API that makes it possible to perform all user actions via the API, including authentication and implements AJAX for better user experience.
 
@@ -24,20 +24,18 @@ Allows users to:
 - Search Postings based on Post title
 - Create Posts that will be visible to everyone 
 - Perform CRUD operations on posts they own
-- Only view details of a single neighborhood.
+
 
 Behavior Driven Development (BDD)
 ================================
-| Input                                                                                            | Output                                                                                                                                                   |
-|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Sign in with the application to start using.                                                     | On page load, click register on the NAV bar to register and login using created credentials to start using                                               |
-| Set up a profile about me and a general location and my neighborhood name.                       | On sign up and login, click profile on navbar to navigate to your profile and update neighborhood information and your profile information               |
-| Find a list of different businesses in my neighborhood.                                          | Navigate to Search dropdown on Navbar and click Search Business. In the search table, type the neighborhood your want to search                          |
-| Find Contact Information for the health department and Police authorities near my neighborhood.  | Navigate to Search dropdown on Navbar and click Search Contact. In the search table, type the neighborhood your want to search                           |
-| Create Posts that will be visible to everyone in my neighborhood.                                | Click on New Post on Nav bar to create new posts and click POST while done                                                                               |
-| Change My neighborhood when I decide to move out.                                                | To change nighborhood, go to profile and select from the dropdown button your new neighborhood                                                           |
-| Only view details of a single neighborhood.                                                      | On navigating to the neighborhood page, click the neighborhood title to navigate to enighborhood details and oncly view details of a single neighborhood |
-
+| Input                                                                             | Output                                                                                               |
+|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| - Sign in with the application to start using.                                    | On signup, user is navigated to login page and on submitting correct credentials can visit home page |
+| - add (and edit and delete) a row what he has worked on, what date, for how long. | User has CRUD control over their own postings                                                        |
+| - Set up a profile about me and be able to update profile as needed.              | Users can update profile and create all profile details                                              |
+| - Perform all user actions via the REST API, including authentication             | The REST API handles all POST, GET operations and includes tokens                                    |
+| - Search Postings based on Post title                                             | Users can search by clicking the search  bar                                                         |
+| - Create Posts that will be visible to everyone                                   | Based on authentication, users can create posts                                                      |
 
 ## Getting Started
 
