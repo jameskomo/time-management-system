@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'timeapp.apps.TimeappConfig',
     'crispy_forms',
     'bootstrap4',
+    'rest_framework',
     'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
