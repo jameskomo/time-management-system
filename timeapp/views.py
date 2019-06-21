@@ -12,6 +12,12 @@ from django.contrib.auth.models import User
 from .models import Post
 from .filters import PostFilter
 
+# REST FRAMEWORK
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import PostSerializer
+# END OF REST IMPORTS
+
 def home(request):
     context = {
         'posts': Post.objects.all()
