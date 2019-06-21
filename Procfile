@@ -1,1 +1,1 @@
-web: gunicorn time-management-system.wsgi --log-file -
+web: gunicorn time_management.wsgi --log-file -
