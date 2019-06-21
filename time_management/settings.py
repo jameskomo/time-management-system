@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bootstrap4',
     'rest_framework',
+     'rest_framework.authtoken',
     'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,7 +75,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'time_management.wsgi.application'
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
