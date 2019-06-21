@@ -88,3 +88,9 @@ def postsearch(request):
     post_filter = PostFilter(request.GET, queryset=post_list)
     return render(request, 'timeapp/post-search.html', {'filter': post_filter})
 
+# REST API VIEW
+class PostList(APIView):
+    def get(self, request, format=None):
+        all_merch = Post.objects.all()
+        serializers = PostSerializer(all_merch, many=True)
+        return Response(serializers.data)

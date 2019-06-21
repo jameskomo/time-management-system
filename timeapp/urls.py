@@ -18,4 +18,6 @@ urlpatterns = [
     path('about/', views.about, name='timeapp-about'),
     url(r'^searchpost/$', views.postsearch, name='post-search'),
     url(r'^ajax/post-form/$', PostCreateView.as_view(), name='post-form'),
+    # API ROUTES
+    url(r'^api/post/$', views.PostList.as_view())
 ]
