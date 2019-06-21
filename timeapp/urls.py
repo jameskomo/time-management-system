@@ -17,4 +17,5 @@ urlpatterns = [
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='timeapp-about'),
     url(r'^searchpost/$', views.postsearch, name='post-search'),
+    url(r'^ajax/post-form/$', PostCreateView.as_view(), name='post-form'),
 ]

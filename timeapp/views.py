@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
     ListView,
@@ -38,6 +39,8 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+        data = {'success': 'You have been successfully Posted to Time APP'}
+        return JsonResponse(data)
 
 # Update Class Views for Post, Business, Neighborhood and Contact
 
